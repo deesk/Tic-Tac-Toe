@@ -1,37 +1,49 @@
 
 
 body , .main , .grid-wrap {
-background: #2d3a4a; /* fallback for old browsers */
-
+background: #2d3a4a;
+}
+.title {
+  font-family: 'Sancreek', cursive;
+  font-size: 4em;
+  color: #f92809;
+}
+h1 {
+    margin: 0;
+}
+h1 > spam {
+  font-size: 0.5em;
 }
 
 .main {
-  margin: 0 auto ;
-  width: 100%;
+  margin: 30px auto ;
+  width: 70%;
   text-align: center;
-  /*background-color: #676559;*/
-  /*position: relative;*/
 }
 
 .grid-wrap , .playAgain {
   display: inline-block;
-  /*border: 3px solid #cf0d00;*/
   border-radius: 10%;
-
-  margin: 90px 0;
+  margin: 31px auto;;
   width: 40%;
   text-align: center;
-
 }
 
 .grid-wrap {
-
   padding: 10px;
-
 }
 
-.grid {
+.scoreList {
+  display: inline-block;
+  width: 30%;
+  /*height: 470px;*/
 
+  color: #320435;
+  vertical-align: top;
+}
+
+
+.grid {
   display: inline-block;
   /*border: 1px solid black;*/
   margin: 1%;
@@ -44,7 +56,6 @@ background: #2d3a4a; /* fallback for old browsers */
 
 .playerOne {
   background-color: #f65d4f;
-#f65d4f
 }
 
 .playerTwo {
@@ -52,7 +63,6 @@ background: #2d3a4a; /* fallback for old browsers */
 }
 
 .playAgain {
-
   /*border : 1px solid black;*/
   background-color: #eb5612;
   opacity: 0.9;
@@ -61,17 +71,101 @@ background: #2d3a4a; /* fallback for old browsers */
   color: #320435;
 
   position: fixed;
-  top: 21%;
-  left: 34%;
+  top: 45%;
+  left: 44%;
   width: 32%;
   height: 28%;
 }
 
+
+  .score {
+    margin: 30px 29% 61px 29%;
+    width: 40%;
+    height: 90px;
+  }
+
+  .scoreList > p {
+    margin: 0;
+    font-family: 'Sancreek', cursive;
+    color: #e7de9b;
+    font-size: 3em;
+  }
+
+  .draw {
+    background-color: #e7de9b;
+  }
+
+
 .playAgain > p {
   margin: 8% 8% 1% 8%;
+}
+
+.drawScore, .p1Score, .p2Score {
+  font-size: 4em;
+  padding: 6%;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 500px) {
+
+  .main {
+    margin: 40px auto ;
+    width: 90%;
+    text-align: center;
+  }
+
+
+    h1 {
+      font-size: .5em;
+    }
+
+    .grid-wrap , .playAgain {
+
+      width: 60%;
+      margin-top: 70px;
+    }
+
+    .grid {
+
+      width: 30%;
+      height: 70px;
+    }
+
+    .scoreList {
+      width: 30%;
+    }
+    .score {
+      margin: 30px 29% 61px 29%;
+      width: 40%;
+      height: 50px;
+    }
+
+    .scoreList > p {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    .playAgain {
+      font-size: 1.5em;
+      color: #320435;
+
+      position: fixed;
+      top: 24%;
+      left: 44%;
+      width: 32%;
+      height: 28%;
+    }
+
+    .drawScore, .p1Score, .p2Score {
+      font-size: 3em;
+      padding: 0%;
+    }
 
 
 }
+
+
+
 
 .playAgain-btn {
 	-moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
