@@ -10,6 +10,7 @@ background: #2d3a4a;
 }
 h1 {
     margin: 0;
+    padding-left: 4%;
 }
 h1 > spam {
   font-size: 0.5em;

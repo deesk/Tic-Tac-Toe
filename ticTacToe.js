@@ -11,7 +11,8 @@ var playerOne = allPatterns[1];
 var playerTwo = allPatterns[2];
 var win = false;
 var drawScore = 0;
-
+//current selected grid by player assined in playGame() & playAgain();
+// var currentGrid;
 
 // this adds value form 1 to 9 to all 9 grids
 var setPatternToGrid = function (){
@@ -35,9 +36,7 @@ var playAgainDilogBox = function(player){
     $('.grid').removeClass('playerOne playerTwo');
     $('.playAgain').remove();
     win = false;
-
   }
-
     $('<div/>', {
       class: 'playAgain'
     }).appendTo('.main');
@@ -55,6 +54,7 @@ var playAgainDilogBox = function(player){
     });
 
     if (win === true){
+
           $('.playAgain > p').html(player.name + ' Wins');
 
           //adding and updating sore card
@@ -115,7 +115,9 @@ var playGame = function(){
     $('.grid').on('click' , function(event){
     // alert('grid clicked');
 
-    var currentGrid = $(this);
+    if (win === false){
+      var currentGrid = $(this);
+    }
 
     if(currentGrid.hasClass('playerOne') || currentGrid.hasClass('playerTwo')){
       // do nothing as current grid has already been selected
@@ -129,26 +131,19 @@ var playGame = function(){
 
         checkWinPatternMatch(currentPlayer);
         draw(playerOne, playerTwo, currentPlayer);
-
         currentPlayer = playerTwo;
 
       }else {
 
         currentGrid.addClass('playerTwo');
-
         // recording patterns of each player
         currentPlayer.patterns.push(this.value);
 
         checkWinPatternMatch(currentPlayer);
         draw(playerOne, playerTwo, currentPlayer);
-
         currentPlayer = playerOne;
-
       }
-
     }
-
-
   })
 }
 
