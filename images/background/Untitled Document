@@ -1,0 +1,3 @@
+background: -webkit-linear-gradient(to left, #30E8BF , #FF8235); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #30E8BF , #FF8235); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
