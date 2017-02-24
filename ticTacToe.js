@@ -86,7 +86,6 @@ var checkWinPatternMatch = function(player){
                     if(count >= 3){
 
                       win = true;
-          console.log("89:CWPM-T " + win);
                       playAgainDilogBox(player );
                     }
                 }
@@ -98,7 +97,6 @@ var checkWinPatternMatch = function(player){
 var draw = function(playerOne, playerTwo, player){
 
   var  totalPlayersPatterns = playerOne.patterns.length + playerTwo.patterns.length
-console.log("102:Draw-S " + win);
 
     if( (totalPlayersPatterns === 9 ) && (win === false)){
 
@@ -123,25 +121,33 @@ var playGame = function(){
       // do nothing as current grid has already been selected
 
     }else {
-      if(currentPlayer === playerOne){
 
+      if(currentPlayer === playerOne){
         currentGrid.addClass('playerOne');
         // recording patterns of each player
         currentPlayer.patterns.push(this.value);
 
         checkWinPatternMatch(currentPlayer);
         draw(playerOne, playerTwo, currentPlayer);
+
+        $('.turn > spam').html(currentPlayer.name).removeClass('turnPlayerOne')
         currentPlayer = playerTwo;
+        $('.turn > spam').html(currentPlayer.name).addClass('turnPlayerTwo');
 
       }else {
-
+        console.log('sdfsdf')
         currentGrid.addClass('playerTwo');
         // recording patterns of each player
         currentPlayer.patterns.push(this.value);
 
         checkWinPatternMatch(currentPlayer);
         draw(playerOne, playerTwo, currentPlayer);
-        currentPlayer = playerOne;
+
+        $('.turn > spam').html(currentPlayer.name).removeClass('turnPlayerTwo')
+        debugger
+          currentPlayer = playerOne;
+        $('.turn  > spam' ).html(currentPlayer.name).addClass('turnPlayerOne');
+
       }
     }
   })
