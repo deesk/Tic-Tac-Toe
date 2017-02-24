@@ -5,7 +5,7 @@ background: #2d3a4a;
 }
 .title {
   font-family: 'Sancreek', cursive;
-  font-size: 4em;
+  font-size: 2em;
   color: #f92809;
 }
 h1 {
@@ -55,7 +55,7 @@ h1 > spam {
   display: inline-block;
   margin: 1%;
   width: 30%;
-  height: 150px;
+  height: 124px;
   background-color: #e7de9b;
   cursor: pointer;
   border-radius: 30%;
@@ -85,9 +85,10 @@ h1 > spam {
 
 
   .score {
-    margin: 30px 29% 61px 29%;
-    width: 40%;
+    margin: 10px 29% 27px 29%;
+    width: 28%;
     height: 90px;
+    border-radius:45%
   }
 
   .scoreList > p {
