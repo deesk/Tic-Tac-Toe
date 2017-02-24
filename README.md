@@ -1,7 +1,6 @@
 # Tic-Tac-reTro
 [website][1]
-
-[1]: https://deesk.github.io/Tic-Tac-Toe/ "Title"
+[1]: https://deesk.github.io/Tic-Tac-reTro/ "Title"
 
 This project was coded in jQuery, JavaScript, HTML and CSS.
 
