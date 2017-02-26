@@ -11,6 +11,7 @@ background: #2d3a4a;
 h1 {
     margin: 0;
     padding-left: 4%;
+    text-shadow: 0px 0px 30px white
 }
 h1 > spam {
   font-size: 0.5em;
@@ -72,7 +73,7 @@ h1 > spam {
 .playAgain {
   background-color: #eb5612;
   opacity: 0.9;
-  font-family: 'Fascinate Inline', cursive;
+  font-family: 'Sancreek', cursive;
   font-size: 3em;
   color: #320435;
 

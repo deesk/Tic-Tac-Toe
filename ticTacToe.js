@@ -6,11 +6,13 @@ var allPatterns = [
   {patterns : [] , name: "Player One" , score: 0 },
   {patterns : [] , name: "Player Two" , score: 0 }
 ]
+var grid = 3;// used in countMatchedPatterns()
 var winPattern = allPatterns[0].winningPatterns;
 var playerOne = allPatterns[1];
 var playerTwo = allPatterns[2];
 var win = false;
 var drawScore = 0;
+
 //current selected grid by player assined in playGame() & playAgain();
 // var currentGrid;
 
@@ -45,11 +47,10 @@ var playAgainDilogBox = function(player){
 
     $('.playAgain').append('<p>' , $('<button class="playAgain-btn"/>').html('Play Again'));
 
-
     $('.playAgain-btn').on('click' , function(event){
         resetGame();
 
-        $('.playAgain').fadeOut('slow');
+          $('.playAgain').fadeOut('slow');
 
     });
 
@@ -71,28 +72,41 @@ var playAgainDilogBox = function(player){
     }
 }
 
-var checkWinPatternMatch = function(player){
 
-    $.each(winPattern, function(index, element){
+var countMatchedPatterns = function(player) {
+    var winningScore;
+    $.each(winPattern, function(wIndex, wElem){ // w: Winptterns Index & element
 
         var count = 0;
-        $.each(element, function(index, element){
 
-            for(var i = 0; i < player.patterns.length; i++){
-                if(player.patterns[i] === element){
-
+        $.each(player.patterns, function(index, element){
+              if($.inArray(element,wElem) !== -1){
+                      // console.log('inA: '+element , wElem)
                     count++;
+                      // console.log("COUNT:" + count);
+                    if(count === 3){
+                          // console.log("return "+  count);
 
-                    if(count >= 3){
-
-                      win = true;
-                      playAgainDilogBox(player );
-                    }
-                }
-            }
+                            winningScore = count;
+                        }
+                  }
           })
-      })
+          console.log("................................");
+    })
+    return  winningScore;
 }
+
+var checkWinPatternMatch = function(player){
+
+        if(countMatchedPatterns(player) >= 3){
+
+          win = true;
+          playAgainDilogBox(player);
+        }
+
+  }
+
+
 
 var draw = function(playerOne, playerTwo, player){
 
@@ -123,30 +137,30 @@ var playGame = function(){
     }else {
 
       if(currentPlayer === playerOne){
-        currentGrid.addClass('playerOne');
-        // recording patterns of each player
-        currentPlayer.patterns.push(this.value);
+          currentGrid.addClass('playerOne');
+          // recording patterns of each player
+          currentPlayer.patterns.push(this.value);
 
-        checkWinPatternMatch(currentPlayer);
-        draw(playerOne, playerTwo, currentPlayer);
+          checkWinPatternMatch(currentPlayer);
+          draw(playerOne, playerTwo, currentPlayer);
 
-        $('.turn > spam').html(currentPlayer.name).removeClass('turnPlayerOne')
-        currentPlayer = playerTwo;
-        $('.turn > spam').html(currentPlayer.name).addClass('turnPlayerTwo');
+          $('.turn > spam').html(currentPlayer.name).removeClass('turnPlayerOne')
+          currentPlayer = playerTwo;
+          $('.turn > spam').html(currentPlayer.name).addClass('turnPlayerTwo');
 
       }else {
-        console.log('sdfsdf')
-        currentGrid.addClass('playerTwo');
-        // recording patterns of each player
-        currentPlayer.patterns.push(this.value);
+          console.log('sdfsdf')
+          currentGrid.addClass('playerTwo');
+          // recording patterns of each player
+          currentPlayer.patterns.push(this.value);
 
-        checkWinPatternMatch(currentPlayer);
-        draw(playerOne, playerTwo, currentPlayer);
+          checkWinPatternMatch(currentPlayer);
+          draw(playerOne, playerTwo, currentPlayer);
 
-        $('.turn > spam').html(currentPlayer.name).removeClass('turnPlayerTwo')
-        debugger
-          currentPlayer = playerOne;
-        $('.turn  > spam' ).html(currentPlayer.name).addClass('turnPlayerOne');
+          $('.turn > spam').html(currentPlayer.name).removeClass('turnPlayerTwo')
+
+            currentPlayer = playerOne;
+          $('.turn  > spam' ).html(currentPlayer.name).addClass('turnPlayerOne');
 
       }
     }
