@@ -28,7 +28,7 @@ h1 > span {
   display: inline-block;
   width: 100%;
   font-family: 'Sancreek', cursive;
-  color: #e7de9b;
+  color: white;
   font-size: 2em;
 }
 
@@ -48,7 +48,7 @@ h1 > span {
 .scoreList {
   display: inline-block;
   width: 53%;
-  color: #320435;
+  color: #4ac9b4;
   font-size: 1.7em
 }
 
@@ -57,7 +57,7 @@ h1 > span {
   margin: 1%;
   width: 100px;
   height: 100px;
-  background-color: #e7de9b;
+  background-color: white;
   cursor: pointer;
   border-radius: 30%;
 }
@@ -68,8 +68,8 @@ h1 > span {
 }
 
 .playerTwo {
-  background-color: #e9c660;
-  color: white;
+  background-color: #4ac9b4;
+  color: #4ac9b4;
 }
 
 .playAgain {
@@ -88,30 +88,32 @@ h1 > span {
 
 .score {
   display: inline-block;
+  color: #2d3a4a;
   width: 17%;
   border-radius:15%
+}
+
+.scoreList {
+  font-family: 'Sancreek', cursive;
 }
 
 .scoreList > h2 {
   margin: 0;
   font-family: 'Sancreek', cursive;
-  color: #e7de9b;
 }
 
 .draw {
-  background-color: #e7de9b;
-  color: black;
+  background-color: #8451a1;
 }
 
 .playAgain > p {
   margin: 6% 8% 1% 8%;
 }
 
-.scoreList p {
-  font-family: 'Sancreek', cursive;
+.scoreList > p {
   display: inline-block;
-  color: white;
   margin: 0;
+  color: white;
 }
 
 .score p {
@@ -127,7 +129,7 @@ h1 > span {
   }
 
 .turnPlayerTwo {
-  color: #e9c660;
+  color: #4ac9b4;
 }
 
 footer {

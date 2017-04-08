@@ -20,17 +20,19 @@ So whenever players click each grid I record that value in player's array and ch
 of winner combination matches with player combination then he/she wins. If doesn't then will be draw.
 
 ### Features
-- 9 grid game
+- Can be played beteen two players
+- 9 grids game
 - Live score update
 - Repaly
 
 ### GUI Design
-- Colors: I have choosed retro colors. from where game gets its Name  **Tic** **Tac** re**Tro**
-- Fonts: Beside Arial i have chosen two google fonts.Called Fascinate Inline, Sancreek.
+- **Colors:** &nbsp; I have choosed retro theme for colors from where game gets its Name **Tic** **Tac** re**Tro**
+- **Fonts:**  &nbsp; Two google fonts.Called Fascinate Inline, Sancreek.
 
 ### Challanges (solved)
 - Some how Draw was not functioning as I expected. When game is draw in frist turn its work( by displaying the
   message and resetting game for new game) . But after winning a game by any player, if next game gets draw doesn't display     the message. Problem could be with win boolean which somehow still stays true even game is draw.
+
   **Status** : Still working on it (fixed).
 - Once game is won by any play or its draw. Dialogue box pops out with message  player won or its draw but
   player can click grids which are in background.
