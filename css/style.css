@@ -1,29 +1,32 @@
 
-
 body , .main , .grid-wrap {
 background: #2d3a4a;
+margin: 0;
 }
 .title {
+  display: inline-block;
   font-family: 'Sancreek', cursive;
   font-size: 2em;
   color: #f92809;
 }
 h1 {
-    margin: 0;
-    padding-left: 4%;
-    text-shadow: 0px 0px 30px white
+  display: inline-block;
+  margin: 0;
+  text-shadow: 0px 0px 30px white
 }
-h1 > spam {
+h1 > span {
   font-size: 0.5em;
 }
 
 .main {
   margin: 30px auto ;
-  width: 70%;
+  width: 660px;
   text-align: center;
 }
 
 .turn {
+  display: inline-block;
+  width: 100%;
   font-family: 'Sancreek', cursive;
   color: #e7de9b;
   font-size: 2em;
@@ -32,31 +35,28 @@ h1 > spam {
 .grid-wrap , .playAgain {
   display: inline-block;
   border-radius: 10%;
-  margin: 31px auto;;
-  width: 40%;
+  width: 50%;
   text-align: center;
 }
 
 .grid-wrap {
+  position: relative;
   padding: 10px;
-  margin-top: 2px;
+  margin: 2px;
 }
 
 .scoreList {
   display: inline-block;
-  width: 30%;
-  /*height: 470px;*/
-
+  width: 53%;
   color: #320435;
-  vertical-align: top;
+  font-size: 1.7em
 }
-
 
 .grid {
   display: inline-block;
   margin: 1%;
-  width: 30%;
-  height: 124px;
+  width: 100px;
+  height: 100px;
   background-color: #e7de9b;
   cursor: pointer;
   border-radius: 30%;
@@ -64,53 +64,58 @@ h1 > spam {
 
 .playerOne {
   background-color: #f65d4f;
+  color: white;
 }
 
 .playerTwo {
   background-color: #e9c660;
+  color: white;
 }
 
 .playAgain {
   background-color: #eb5612;
   opacity: 0.9;
   font-family: 'Sancreek', cursive;
-  font-size: 3em;
-  color: #320435;
+  font-size: 1.5em;
+  color: white;
 
-  position: fixed;
-  top: 45%;
-  left: 44%;
-  width: 32%;
-  height: 28%;
+  position: absolute;
+  top: 34%;
+  left: 18%;
+  height: 31%;
+  width: 62%;
 }
 
+.score {
+  display: inline-block;
+  width: 17%;
+  border-radius:15%
+}
 
-  .score {
-    margin: 10px 29% 27px 29%;
-    width: 28%;
-    height: 90px;
-    border-radius:45%
-  }
+.scoreList > h2 {
+  margin: 0;
+  font-family: 'Sancreek', cursive;
+  color: #e7de9b;
+}
 
-  .scoreList > p {
-    margin: 0;
-    font-family: 'Sancreek', cursive;
-    color: #e7de9b;
-    font-size: 3em;
-  }
-
-  .draw {
-    background-color: #e7de9b;
-  }
+.draw {
+  background-color: #e7de9b;
+  color: black;
+}
 
 .playAgain > p {
-  margin: 8% 8% 1% 8%;
+  margin: 6% 8% 1% 8%;
 }
 
-.drawScore, .p1Score, .p2Score {
-  font-size: 4em;
-  padding: 6%;
-  margin-top: 10px;
+.scoreList p {
+  font-family: 'Sancreek', cursive;
+  display: inline-block;
+  color: white;
+  margin: 0;
+}
+
+.score p {
+  margin: 0;
 }
 
 .turn {
@@ -125,63 +130,63 @@ h1 > spam {
   color: #e9c660;
 }
 
+footer {
+  position : relative;
+  text-align: center;
+  border-top: 2px solid white;
+  background-color: #ab4940;
+  height: 200px;
+}
 
-@media screen and (max-width: 500px) {
+.footnote {
+  margin: 0;
+  position: absolute;
+  top: 21%;
+  font-family: 'Sancreek', cursive;
+  display: inline-block;
+}
+.footnote h2 {
+  color: white;
+  margin: 0;
+}
+
+.footnote img {
+  width: 60px;
+}
+
+
+@media screen and (max-width: 660px) {
 
   .main {
     margin: 40px auto ;
-    width: 90%;
+    width: 350px;
     text-align: center;
   }
 
+  .grid-wrap {
+    width: 87%;
+  }
 
-    h1 {
-      font-size: .5em;
-    }
+  .grid {
+    width: 68px;
+    height: 68px;
+  }
 
-    .grid-wrap , .playAgain {
+  .title {
+    font-size: 1.5em;
+  }
 
-      width: 60%;
-      margin-top: 70px;
-    }
+  .turn {
+    font-size: 1.3em;
+  }
 
-    .grid {
+  .scoreList {
+    font-size: 1.7em;
+  }
 
-      width: 30%;
-      height: 70px;
-    }
-
-    .scoreList {
-      width: 30%;
-    }
-    .score {
-      margin: 30px 29% 61px 29%;
-      width: 40%;
-      height: 50px;
-    }
-
-    .scoreList > p {
-      margin: 0;
-      font-size: 1.5em;
-    }
-
-    .playAgain {
-      font-size: 1.5em;
-      color: #320435;
-
-      position: fixed;
-      top: 24%;
-      left: 44%;
-      width: 32%;
-      height: 28%;
-    }
-
-    .drawScore, .p1Score, .p2Score {
-      font-size: 3em;
-      padding: 0%;
-    }
-
-
+  .playAgain {
+    font-size: 1.1em;
+  }
 }
 
 .playAgain-btn {
@@ -193,7 +198,7 @@ h1 > spam {
 	background:-webkit-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
 	background:-o-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
 	background:-ms-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
-	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background:linear-gradient(to bottom, #2d3a4a 5%, #6c7c7c 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#6c7c7c',GradientType=0);
 	background-color:#943a3a;
 	-moz-border-radius:5px;
@@ -202,11 +207,10 @@ h1 > spam {
 	border:1px solid #566963;
 	display:inline-block;
 	cursor:pointer;
-	color:#e62e1d;
-  font-family: 'Fascinate Inline', cursive;
-	font-size:0.4em;
-	font-weight:bold;
-	padding:11px 23px;
+	color:#ecf0f1;
+  font-family: 'Sancreek', cursive;
+	font-size:1em;
+	padding:6px 9px;
 	text-decoration:none;
 	/*text-shadow:0px -1px 0px #2b665e;*/
 }
