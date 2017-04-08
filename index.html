@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Sancreek" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic-Tac-reTro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Sancreek" rel="stylesheet">
+  </head>
 
-<body>
+  <body>
 
-  <div class="main">
-    <div class="title">
-      <h1> Tic Tac <span>re</span>Tro</h1>
+    <div class="main">
+
+      <header class="title">
+        <h1> Tic Tac <span>re</span>Tro</h1>
+      </header>
+
+      <p class= "turn"> Turn: <span class="turnPlayerOne"> Player One </span> </p>
+
+      <div class="grid-wrap">
+        <div class="grid"> </div>
+        <div class="grid"> </div>
+        <div class="grid"> </div>
+
+        <div class="grid"> </div>
+        <div class="grid"> </div>
+        <div class="grid"> </div>
+
+        <div class="grid"> </div>
+        <div class="grid"> </div>
+        <div class="grid"> </div>
+      </div>
+
+      <div class="scoreList">
+        <p>  Score </p>
+        <div class='score playerOne'><p  class="p1Score"> 0 </p></div>
+        <div class='score playerTwo p2'> <p class="p2Score"> 0 </p> </div>
+        <div class='score draw'> <p class='drawScore'> 0 </p></div>
+      </div>
+
     </div>
 
-    <p class= "turn"> Turn: <span class="turnPlayerOne"> Player One </span> </p>
-
-    <div class="grid-wrap">
-      <div class="grid"> </div>
-      <div class="grid"> </div>
-      <div class="grid"> </div>
-
-      <div class="grid"> </div>
-      <div class="grid"> </div>
-      <div class="grid"> </div>
-
-      <div class="grid"> </div>
-      <div class="grid"> </div>
-      <div class="grid"> </div>
-    </div>
-
-    <div class="scoreList">
-      <p>  Score </p>
-      <div class='score playerOne'><p  class="p1Score"> 0 </p></div>
-      <div class='score playerTwo p2'> <p class="p2Score"> 0 </p> </div>
-      <div class='score draw'> <p class='drawScore'> 0 </p></div>
-    </div>
-
-  </div>
-
-  <footer>
-    <div class='footnote'>
-      <h2> SandeshK <h2>
-      <a href="https://www.linkedin.com/in/de-sandesh/" target="_blank">
+    <footer>
+      <div class='footnote'>
+        <h2> SandeshK </h2>
+        <a href="https://github.com/deesk/Tic-Tac-reTro" target="_blank">
         <img src="http://www.freeiconspng.com/uploads/linkedin-icon-14.png">
-      </a>
-      <a href="https://github.com/deesk/Tic-Tac-reTro" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ei-sc-github.svg/768px-Ei-sc-github.svg.png">
-      </a>
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.1.1.js"
-  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-  crossorigin="anonymous"></script>
-  <script src="ticTacToe.js"> </script>
+
+        <a href="https://github.com/deesk/Tic-Tac-reTro" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ei-sc-github.svg/768px-Ei-sc-github.svg.png">
+        </a>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+    <script src="ticTacToe.js"> </script>
 </body>
 </html>

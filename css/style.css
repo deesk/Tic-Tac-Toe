@@ -1,7 +1,11 @@
+body {
+  margin: 0;
+}
 
-body , .main , .grid-wrap {
-background: #2d3a4a;
-margin: 0;
+body,
+.main,
+.grid-wrap {
+  background: #2d3a4a;
 }
 .title {
   display: inline-block;
@@ -19,7 +23,7 @@ h1 > span {
 }
 
 .main {
-  margin: 30px auto ;
+  margin: 11px auto ;
   width: 660px;
   text-align: center;
 }
@@ -134,7 +138,6 @@ h1 > span {
 
 footer {
   position : relative;
-  text-align: center;
   border-top: 2px solid white;
   background-color: #ab4940;
   height: 200px;
@@ -143,13 +146,18 @@ footer {
 .footnote {
   margin: 0;
   position: absolute;
-  top: 21%;
+  top: 25%;
+  left: 45%;
   font-family: 'Sancreek', cursive;
   display: inline-block;
 }
 .footnote h2 {
   color: white;
   margin: 0;
+}
+
+.footnote a {
+  text-decoration: none;
 }
 
 .footnote img {
@@ -160,7 +168,7 @@ footer {
 @media screen and (max-width: 660px) {
 
   .main {
-    margin: 40px auto ;
+    margin: 34px auto ;
     width: 350px;
     text-align: center;
   }
